@@ -71,7 +71,14 @@ __Tutaj warto zastanowić się nad tym dlaczego dane są nieuzupełnione.__
 
 ### 4. Podgląd wartości tekstowych/kategorycznych:
 ```python
-df.value_counts() # Wyświetla wszystkie występujące wartości w danej kolumnie oraz liczbę wystąpień
+df['column'].value_counts() # Wyświetla wszystkie występujące wartości w danej kolumnie oraz liczbę wystąpień
+df[['column1', 'column2']].value_counts() # Wyświetla liczbe wystąpień każdej kombinacji 2 kolumn
+df.value_counts() # Wyświetla liczbę wystąpień kombinacji wszystkich kolumn
+
+#Dla kazdej kolumny nie-numerycznej zlicz każdą kategorię:
+text_columns = df.select_dtypes(include=['object'])
+for column in text_columns:
+    print(f"\n{df[column].value_counts()}")
 ```
 __Tutaj warto zastanowić się jak możemy wykorzystać te dane__
 - Czy konkretne kolumny mają kilka możliwych grup i możnaje rozbijać na kolumny "gorącojedynkowe"?
@@ -119,6 +126,12 @@ bins = np.histogram_bin_edges(df['column_name'], bins='auto')
 df['column_name'].hist(bins=bins, figsize=(10, 6))
 ```
 
+```python
+#Możemy też podejrzeć jakiś plot bardziej szczegółowo, albo np. nałożyć na niego kategorię
+#fig, ax = plt.subplots(figsize=(14, 6)) # Jeżeli chcemy przeskalować wymiary
+sns.histplot(df, x="numerical_column", hue="categorical_column", multiple="stack") #Bazowa wersja, bez żadnych modyfikacji
+```
+![](../img/2023-04-11-20-55-42.png)
 
 __Tutaj warto zrozumieć dane, szukać anomalii i przeanalizować ich rozkład__
 - Anomalię możn wykryć np. jeżeli w jakichś punktach (zwłaszcza skrajnych) widać większe skupiska obserwacji. Może to oznaczać, że powyżej pewnej wartości dane są grupowane.
@@ -220,7 +233,12 @@ __Tutaj mamy do czynienia z prawdziwą "eksploracją"__
 ...
 
 # Dobór modeli do przetestowania
-...
+__Musimy określić, czy:__
+1. Mamy dane o celu?
+- Tak -> Uczenie nadzorowane (Supervised learning)
+- Nie -> Uczenie nienadzorowane (unsupervised learning)
+
+2. Czy przewidujemy liczby, kategorie jeszcze co innego?
 
 # Wybór najlepszych modeli i strojenie hiperparametrów
 ...
