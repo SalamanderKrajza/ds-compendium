@@ -15189,7 +15189,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </li>
 </ul>
 </li>
-<li><a href="#Find-best-hiperparameters-for-model">Find best hiperparameters for model</a><ul>
+<li><a href="#Find-best-hiperparameters-for-DecissionTreeRegressor">Find best hiperparameters for DecissionTreeRegressor</a><ul>
 <li><a href="#Plot-basic-hiperparameters-to-better-understand-data">Plot basic hiperparameters to better understand data</a><ul>
 <li><a href="#min_samples_split">min_samples_split</a></li>
 <li><a href="#max_depth">max_depth</a></li>
@@ -15201,6 +15201,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><a href="#Compare-2-models-trained-with-grid_search">Compare 2 models trained with grid_search</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#Find-best-hiperparameters-for-SGDRegressor">Find best hiperparameters for SGDRegressor</a><ul>
+<li><a href="#Create-and-fit-grid_search">Create and fit grid_search</a></li>
+<li><a href="#Train-model-with-partial-fit-to-plot-train-and-validation-errors">Train model with partial fit to plot train and validation errors</a></li>
 </ul>
 </li>
 <li><a href="#Save-to-html">Save to html</a></li>
@@ -16628,7 +16633,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x27b66b26140&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x22df25e0a30&gt;</pre>
 </div>
 
 </div>
@@ -16683,7 +16688,7 @@ jp-needs-light-background
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x27b6a8fd990&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x22df908dc30&gt;</pre>
 </div>
 
 </div>
@@ -17852,7 +17857,7 @@ That specific dataset is not well fitted to our needs and there won't be many im
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x27b6b6478e0&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x22df9c92950&gt;</pre>
 </div>
 
 </div>
@@ -18430,18 +18435,18 @@ We have very limited nubmer of samples and our data has not clear patterns visib
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Shapes of all/train/test datasets (607, 11) (485, 152) (122, 152) 
 
-Fitting of [            LinearRegression            ] model started. 	 All models completion: [  0 /  12]. 	 2023-04-22 21:01:05.355793
-Fitting of [         DecisionTreeRegressor          ] model started. 	 All models completion: [  1 /  12]. 	 2023-04-22 21:01:05.410806
-Fitting of [         RandomForestRegressor          ] model started. 	 All models completion: [  2 /  12]. 	 2023-04-22 21:01:05.423808
-Fitting of [                  SVR                   ] model started. 	 All models completion: [  3 /  12]. 	 2023-04-22 21:01:05.699870
-Fitting of [             BayesianRidge              ] model started. 	 All models completion: [  4 /  12]. 	 2023-04-22 21:01:05.727876
-Fitting of [                 Lasso                  ] model started. 	 All models completion: [  5 /  12]. 	 2023-04-22 21:01:05.795892
-Fitting of [               ElasticNet               ] model started. 	 All models completion: [  6 /  12]. 	 2023-04-22 21:01:06.037948
-Fitting of [                 Ridge                  ] model started. 	 All models completion: [  7 /  12]. 	 2023-04-22 21:01:06.046949
-Fitting of [       GradientBoostingRegressor        ] model started. 	 All models completion: [  8 /  12]. 	 2023-04-22 21:01:06.055952
-Fitting of [              SGDRegressor              ] model started. 	 All models completion: [  9 /  12]. 	 2023-04-22 21:01:06.160975
-Fitting of [                SVR_rbf                 ] model started. 	 All models completion: [ 10 /  12]. 	 2023-04-22 21:01:06.187982
-Fitting of [ExampleNeuralNetwork_with_100_relu_activations] model started. 	 All models completion: [ 11 /  12]. 	 2023-04-22 21:01:06.245993
+Fitting of [            LinearRegression            ] model started. 	 All models completion: [  0 /  12]. 	 2023-04-23 00:31:19.656603
+Fitting of [         DecisionTreeRegressor          ] model started. 	 All models completion: [  1 /  12]. 	 2023-04-23 00:31:19.697612
+Fitting of [         RandomForestRegressor          ] model started. 	 All models completion: [  2 /  12]. 	 2023-04-23 00:31:19.708614
+Fitting of [                  SVR                   ] model started. 	 All models completion: [  3 /  12]. 	 2023-04-23 00:31:19.983676
+Fitting of [             BayesianRidge              ] model started. 	 All models completion: [  4 /  12]. 	 2023-04-23 00:31:20.011682
+Fitting of [                 Lasso                  ] model started. 	 All models completion: [  5 /  12]. 	 2023-04-23 00:31:20.080698
+Fitting of [               ElasticNet               ] model started. 	 All models completion: [  6 /  12]. 	 2023-04-23 00:31:20.312751
+Fitting of [                 Ridge                  ] model started. 	 All models completion: [  7 /  12]. 	 2023-04-23 00:31:20.320753
+Fitting of [       GradientBoostingRegressor        ] model started. 	 All models completion: [  8 /  12]. 	 2023-04-23 00:31:20.329755
+Fitting of [              SGDRegressor              ] model started. 	 All models completion: [  9 /  12]. 	 2023-04-23 00:31:20.434777
+Fitting of [                SVR_rbf                 ] model started. 	 All models completion: [ 10 /  12]. 	 2023-04-23 00:31:20.462784
+Fitting of [ExampleNeuralNetwork_with_100_relu_activations] model started. 	 All models completion: [ 11 /  12]. 	 2023-04-23 00:31:20.521797
 </pre>
 </div>
 </div>
@@ -19317,7 +19322,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Find-best-hiperparameters-for-model">Find best hiperparameters for model<a class="anchor-link" href="#Find-best-hiperparameters-for-model">&#182;</a></h1>
+<h1 id="Find-best-hiperparameters-for-DecissionTreeRegressor">Find best hiperparameters for DecissionTreeRegressor<a class="anchor-link" href="#Find-best-hiperparameters-for-DecissionTreeRegressor">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -19866,7 +19871,7 @@ DecisionTreeRegressorDecisionTreeRegressor(max_depth=3, min_samples_leaf=2, min_
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
@@ -19898,18 +19903,548 @@ DecisionTreeRegressorDecisionTreeRegressor(max_depth=3, min_samples_leaf=2, min_
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp/ipykernel_3556/1562553423.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      4</span> ]
-<span class="ansi-green-fg">      5</span> 
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 6</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>grid_search_test <span class="ansi-yellow-intense-fg ansi-bold">=</span> GridSearchCV<span class="ansi-yellow-intense-fg ansi-bold">(</span>model<span class="ansi-yellow-intense-fg ansi-bold">,</span> param_grid<span class="ansi-yellow-intense-fg ansi-bold">,</span> cv<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">5</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> scoring<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39;neg_mean_squared_error&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> return_train_score<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      7</span> grid_search_test<span class="ansi-yellow-intense-fg ansi-bold">.</span>fit<span class="ansi-yellow-intense-fg ansi-bold">(</span>df_train_transformed<span class="ansi-yellow-intense-fg ansi-bold">.</span>drop<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;salary_in_usd&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> axis<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> df_train_transformed<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;salary_in_usd&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      8</span> cvres <span class="ansi-yellow-intense-fg ansi-bold">=</span> grid_search_test<span class="ansi-yellow-intense-fg ansi-bold">.</span>cv_results_
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Best estimator:  DecisionTreeRegressor(max_depth=3, min_samples_leaf=2, min_samples_split=180,
+                      random_state=1321)
+{&#39;max_depth&#39;: None, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;random_state&#39;: 1321} 22657.463468049802 63760.586852182954
+{&#39;max_depth&#39;: 3, &#39;min_samples_leaf&#39;: 2, &#39;min_samples_split&#39;: 180, &#39;random_state&#39;: 1321} 56868.45970871896 60617.66538763599
+</pre>
+</div>
+</div>
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;GridSearchCV&#39; is not defined</pre>
+</div>
+
+</div>
+
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Find-best-hiperparameters-for-SGDRegressor">Find best hiperparameters for SGDRegressor<a class="anchor-link" href="#Find-best-hiperparameters-for-SGDRegressor">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Create-and-fit-grid_search">Create and fit grid_search<a class="anchor-link" href="#Create-and-fit-grid_search">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">sklearn.exceptions</span> <span class="kn">import</span> <span class="n">ConvergenceWarning</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">ConvergenceWarning</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1321</span><span class="p">)</span>
+
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;squared_error&#39;</span><span class="p">,</span> <span class="s1">&#39;huber&#39;</span><span class="p">,</span> <span class="s1">&#39;epsilon_insensitive&#39;</span><span class="p">,</span> <span class="s1">&#39;squared_epsilon_insensitive&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;penalty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;l1&#39;</span><span class="p">,</span> <span class="s1">&#39;l2&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+        <span class="s1">&#39;max_iter&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2000</span><span class="p">],</span>
+        <span class="s1">&#39;tol&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.00001</span><span class="p">],</span>
+        <span class="s1">&#39;early_stopping&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;squared_error&#39;</span><span class="p">,</span> <span class="s1">&#39;huber&#39;</span><span class="p">,</span> <span class="s1">&#39;epsilon_insensitive&#39;</span><span class="p">,</span> <span class="s1">&#39;squared_epsilon_insensitive&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;penalty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;elasticnet&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+        <span class="s1">&#39;l1_ratio&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1">#Used only with elasticnet</span>
+        <span class="s1">&#39;max_iter&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2000</span><span class="p">],</span>
+        <span class="s1">&#39;tol&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.00001</span><span class="p">],</span>
+        <span class="s1">&#39;early_stopping&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,],</span>
+    <span class="p">},</span>
+        <span class="p">]</span>
+
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span> <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Verbose nalbes grid_search to print progress</span>
+<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">df_train_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">])</span>
+<span class="n">cvres</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">cv_results_</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best estimator: &quot;</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="p">)</span>
+<span class="c1"># for mean_train_score, mean_cv_score, params in zip(cvres[&quot;mean_train_score&quot;], cvres[&quot;mean_test_score&quot;], cvres[&quot;params&quot;]):</span>
+<span class="c1">#     print(params, np.sqrt(-mean_train_score), np.sqrt(-mean_cv_score))</span>
+
+<span class="n">best_index</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_index_</span>
+<span class="n">mean_train_score</span><span class="p">,</span> <span class="n">mean_cv_score</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_train_score&quot;</span><span class="p">][</span><span class="n">best_index</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">][</span><span class="n">best_index</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">][</span><span class="n">best_index</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_train_score</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_cv_score</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Fitting 5 folds for each of 384 candidates, totalling 1920 fits
+Best estimator:  SGDRegressor(alpha=0.01, early_stopping=True,
+             loss=&#39;squared_epsilon_insensitive&#39;, max_iter=2000,
+             random_state=1321)
+{&#39;alpha&#39;: 0.01, &#39;early_stopping&#39;: True, &#39;loss&#39;: &#39;squared_epsilon_insensitive&#39;, &#39;max_iter&#39;: 2000, &#39;penalty&#39;: &#39;l2&#39;, &#39;tol&#39;: 0.001} 52032.62081281968 55177.00912002167
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_index</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_index_</span>
+<span class="n">mean_train_score</span><span class="p">,</span> <span class="n">mean_cv_score</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_train_score&quot;</span><span class="p">][</span><span class="n">best_index</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">][</span><span class="n">best_index</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">][</span><span class="n">best_index</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_train_score</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_cv_score</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>{&#39;alpha&#39;: 0.01, &#39;early_stopping&#39;: True, &#39;loss&#39;: &#39;squared_epsilon_insensitive&#39;, &#39;max_iter&#39;: 2000, &#39;penalty&#39;: &#39;l2&#39;, &#39;tol&#39;: 0.001} 52032.62081281968 55177.00912002167
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
+
+<span class="c1">#Training data:</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+<span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;TRAIN - RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">;  MAE:</span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1">#Test data</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_test_transformed</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">df_test_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+<span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">df_test_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; | TEST - RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">; MAE:</span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>TRAIN - RMSE: 50949.3791;  MAE:33657.3572 | TEST - RMSE: 37329.4129; MAE:29753.5465
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets compare with the one that has default parameters</span>
+<span class="n">df_results</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;`Model name` == &#39;SGDRegressor&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model name</th>
+      <th>Train RMSE</th>
+      <th>Train MAE</th>
+      <th>Test RMSE</th>
+      <th>Test MAE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SGDRegressor</td>
+      <td>46912.484261</td>
+      <td>31325.494808</td>
+      <td>38198.194559</td>
+      <td>29850.513166</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Train-model-with-partial-fit-to-plot-train-and-validation-errors">Train model with partial fit to plot train and validation errors<a class="anchor-link" href="#Train-model-with-partial-fit-to-plot-train-and-validation-errors">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span> <span class="s1">&#39;squared_epsilon_insensitive&#39;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span> <span class="s1">&#39;elasticnet&#39;</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1321</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Split the data into training and validation sets</span>
+<span class="n">df_train_without_val</span><span class="p">,</span> <span class="n">df_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">df_train_without_val</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train_without_val</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">]</span>
+<span class="n">X_val</span> <span class="o">=</span>  <span class="n">df_val</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y_val</span> <span class="o">=</span>  <span class="n">df_val</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">]</span>
+
+<span class="n">train_rmse_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">val_rmse_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="c1"># Evaluate the model on the validation set</span>
+    <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    <span class="n">train_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+    <span class="n">train_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">train_mse</span><span class="p">)</span>
+
+    <span class="n">y_val_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    <span class="n">val_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_val_pred</span><span class="p">)</span>
+    <span class="n">val_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">val_mse</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">500</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2">: Train RMSE = </span><span class="si">{</span><span class="n">train_rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Validation RMSE = </span><span class="si">{</span><span class="n">val_rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">train_rmse_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_rmse</span><span class="p">)</span>
+    <span class="n">val_rmse_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val_rmse</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Epoch 0: Train RMSE = 54873.8408, Validation RMSE = 72767.0466
+Epoch 500: Train RMSE = 46132.5170, Validation RMSE = 63704.5721
+Epoch 1000: Train RMSE = 46126.9944, Validation RMSE = 63659.0301
+Epoch 1500: Train RMSE = 46125.9858, Validation RMSE = 63654.4209
+Epoch 2000: Train RMSE = 46125.5993, Validation RMSE = 63655.8720
+Epoch 2500: Train RMSE = 46125.4090, Validation RMSE = 63658.0792
+Epoch 3000: Train RMSE = 46125.3015, Validation RMSE = 63660.1165
+Epoch 3500: Train RMSE = 46125.2362, Validation RMSE = 63661.8653
+Epoch 4000: Train RMSE = 46125.1952, Validation RMSE = 63663.3580
+Epoch 4500: Train RMSE = 46125.1694, Validation RMSE = 63664.6448
+Epoch 5000: Train RMSE = 46125.1537, Validation RMSE = 63665.7682
+Epoch 5500: Train RMSE = 46125.1450, Validation RMSE = 63666.7608
+Epoch 6000: Train RMSE = 46125.1411, Validation RMSE = 63667.6472
+Epoch 6500: Train RMSE = 46125.1409, Validation RMSE = 63668.4461
+Epoch 7000: Train RMSE = 46125.1432, Validation RMSE = 63669.1718
+Epoch 7500: Train RMSE = 46125.1474, Validation RMSE = 63669.8354
+Epoch 8000: Train RMSE = 46125.1531, Validation RMSE = 63670.4459
+Epoch 8500: Train RMSE = 46125.1599, Validation RMSE = 63671.0104
+Epoch 9000: Train RMSE = 46125.1675, Validation RMSE = 63671.5348
+Epoch 9500: Train RMSE = 46125.1757, Validation RMSE = 63672.0239
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot train_mse and val_mse</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">train_rmse_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Train RMSE&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">val_rmse_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation RMSE&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="s1">&#39;Train and validation RMSE during each epoch&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;RMSE&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span> <span class="c1">#Make y_axis start on 0 </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;matplotlib.legend.Legend at 0x22d81725960&gt;</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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8Y83aWpazb77zuCkk07lwgsXcOCBh/DWW008+ujDtLZu5G9/+38ce+yX+MQnDu/1OTKZbNf+X3/9derq6shksoRhyEEHzeKee+5ip512oaWlhdbWjWyxxRZkMlnq6zdn5co/s3Tp3Uyd+lH23XcG06fv07Vt3BqHWxj2/n4OVUNDzbDvs9ip5tI31HobG+vyto/UZbXdf7vUAc3A2tzjnu2F9B2S2btvzezdt8772mhcYjp16jQ+//lj+fvfX2f33T/IN75xLq2trXzmM5/gpJNO3aTvunXvsHDhj3jttVc5++wz8gbG178+l7a2VlavXs306R9jzpzTu17bd9/9ueCC+XzlK1/l/vvvZebMA7n11miK6v3v352zz57Hbbf9issuu4TGxq346lfPYM89pwJwwQXnbTIl9Z3vXMSECRMS+IqISDEZqcB42sxmuvv9wGHAfcCLwMVmdgmwHZBy99VmFrvvCI19xEyevD0A9fX1rFz5LE899Qdqa2tpa2vv1XfnnXcFYKuttqatLf/lpgsX/ojq6mquuWYRr7/+NyZMeE/Xa9XV49hlF2PFij+xbNn9LFjw3a7AePHFF5g8eXvOP/+7hGHIk08+znnnfZPbb78HgHnzvs322+8wfIWLyJgwUpfVngmcb2aPAlXAEndfDiwDHiU6iT1nEH1LShBE347f/vYONtusjvnzL+Doo79Aa+vGXndgF3KZ6YknfoWmptX86lc3b9J+8MGH8j//cyN1dXXU1Lw73/mHPzzOj398NdlsliAImDJlR8aNG69LW0XKXGJHGO7+V2Dv3OPnia5y6tlnAbCgR1vsvqVq6tSPcP7583j22WeorKxku+0msXp1v6dr+pVKpTj77HnMnXsiBxzw8a72adM+yoUXLuCcc87bpP9RRx3NokWXc/zxx1BTU0sqleLcc8/ver3nlNSBBx7Cpz991KDHJyJjQ1CsawcNh/b2TNjzxM8bb7zCNttsP+C2xbpMRpKKvea437tClNvJUFDN5WAYTnovB6b1bC/LO71FRKRwCgwREYlFgSEiIrEoMEREJBYFhoiIxKLAEBGRWMruHfdG29y5J3H88Scydeq7i+1edtkl7LTTzhx++Kd69T/qqMO58cYl3HTTL3qtVNva2sqxxx7FkiW/6fPz3Xbbr5g9+whefvklHnroQY4//sRBj10r4IqUt7IO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"
+class="
+jp-needs-light-background
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Train error is high what suggests that model is too simple for our needs. <br/>
+It may be good to pick other model or generate new features basing on the orginals</p>
+
+</div>
+</div>
+</div>
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets calculate rmse for our trained epoch-by-epoch model with test data</span>
+<span class="c1">#Training data:</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+<span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">df_train_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;TRAIN - RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">;  MAE:</span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1">#train data</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_test_transformed</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">df_test_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+<span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">df_test_transformed</span><span class="p">[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; | VAL - RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">; MAE:</span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>TRAIN - RMSE: 50128.4656;  MAE:32313.9570 | VAL - RMSE: 37274.0503; MAE:29341.8491
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can see that RMSE on test data is lower than on TRAIN. <br />
+It may be because in train set we have higher mean values so models are trying to predict bigger numbers and has bigger mistakes:</p>
+
+</div>
+</div>
+</div>
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_mean</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">describe</span><span class="p">()[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">][</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span>
+<span class="n">test_mean</span> <span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">describe</span><span class="p">()[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">][</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span>
+<span class="n">train_vs_test</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">describe</span><span class="p">()[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">][</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df_test</span><span class="o">.</span><span class="n">describe</span><span class="p">()[</span><span class="s1">&#39;salary_in_usd&#39;</span><span class="p">][</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Train mean:&#39;</span><span class="p">,</span><span class="n">train_mean</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Test mean:&#39;</span><span class="p">,</span> <span class="n">test_mean</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">train vs test:&#39;</span><span class="p">,</span> <span class="n">train_vs_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Train mean: 114542.1793814433 	Test mean: 103375.81967213115 	train vs test: 1.1080171334527513
+</pre>
 </div>
 </div>
 
@@ -19934,10 +20469,12 @@ DecisionTreeRegressorDecisionTreeRegressor(max_depth=3, min_samples_leaf=2, min_
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># MAKE SURE YOU SAVED YOUR FILE RIGHT BEFORE RUNNING THIS CELL</span>
+<span class="c1"># -&gt; Otherwise it would not display current output of other cells</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="n">notebook_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;__vsc_ipynb_file__&#39;</span><span class="p">])</span> <span class="c1">#This variant works with notebooks inside VSC</span>
 <span class="o">!</span>jupyter nbconvert --to html <span class="nv">$notebook_name</span>
 </pre></div>
@@ -19960,13 +20497,29 @@ DecisionTreeRegressorDecisionTreeRegressor(max_depth=3, min_samples_leaf=2, min_
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[NbConvertApp] Converting notebook ds_salaries.ipynb to html
-[NbConvertApp] Writing 2120230 bytes to ds_salaries.html
+[NbConvertApp] Writing 2187212 bytes to ds_salaries.html
 </pre>
 </div>
 </div>
 
 </div>
 
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
