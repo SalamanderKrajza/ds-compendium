@@ -30,6 +30,9 @@ class SingleModelData():
         return(
             json.dumps(
                 {
+                'model_id':self.model_id,
+                'model_architecture':self.model_architecture,
+                'model_full_description':self.model_full_description,
                 'loss':self.loss[-1],
                 'val_loss':self.val_loss[-1],
                 'test_loss':self.test_loss,
@@ -74,11 +77,12 @@ class MultiModelsData:
 
     def fill_data(self, model_id, model, training_history, test_loss, set_time_end=True, pat="unkwnon", bs="unkwnon", comment=""):
         from commons.model_functions import get_model_total_layers_params_and_units, get_model_description, get_model_layers_info
-        model_full_description = get_model_description(model, pat="unknown", bs="unknown", comment="")
+        model_full_description = get_model_description(model, pat=pat, bs=bs, comment=comment)
         model_architecture = get_model_layers_info(model, ignore_last_layer=True)
         total_params, layers_cnt, total_units = get_model_total_layers_params_and_units(model)
 
         self.models[model_id].model = model
+        self.models[model_id].model_id = model_id
         self.models[model_id].model_full_description = model_full_description
         self.models[model_id].model_architecture = model_architecture
 
@@ -156,7 +160,7 @@ class MultiModelsData:
             ax.set_ylabel('RMSE')
             ax.set_xlim([x_min, x_max]) 
             ax.set_ylim([y_min, y_max]) 
-            ax.set_title(model_id)
+            ax.set_title(f"{model_id} - {model_data.model_architecture}")
 
             #Optional Extra lines
             if (print_best_train_rmse == True) and (self.df_results is not None) and (not self.df_results.empty):
